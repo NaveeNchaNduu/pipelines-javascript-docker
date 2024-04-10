@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: naveenchanduupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: naveenchanduupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: naveenchanduupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: naveenchanduupipelinesjavascriptdocker 
+          image: mycontainerregistryyy.azurecr.io/naveenchanduupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
